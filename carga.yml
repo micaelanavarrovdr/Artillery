@@ -1,0 +1,10 @@
+config:
+  target: "https://jsonplaceholder.typicode.com"  # usamos una API pública de ejemplo
+  phases:
+    - duration: 20   # dura 20 segundos
+      arrivalRate: 5 # simula 5 usuarios por segundo
+
+scenarios:
+  - flow:
+      - get:
+          url: "/posts/1"
